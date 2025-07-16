@@ -81,7 +81,7 @@ if uploaded_file:
             model_name = "facebook/bart-large-cnn"
             summarizer = pipeline("summarization", model=model_name)
             truncated_text = doc_text[:1000]
-            summary = summarizer(truncated_text, max_length=200, min_length=30, do_sample=False)[0]['summary_text']
+            summary = summarizer(truncated_text, max_length=1000, min_length=500, do_sample=False)[0]['summary_text']
         st.subheader("Summary")
         st.write(summary)
 else:
