@@ -3,4 +3,4 @@ pypdf
 transformers
 reportlab
 torch
-docx
+python-docx
